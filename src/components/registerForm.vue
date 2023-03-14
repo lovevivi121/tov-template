@@ -22,6 +22,9 @@
 		<el-form-item label="手机号" prop="telephone">
 			<el-input v-model="ruleForm.telephone" />
 		</el-form-item>
+		<el-form-item label="邮箱" prop="email">
+			<el-input v-model="ruleForm.email" />
+		</el-form-item>
 
 		<el-form-item>
 			<el-button type="primary" @click="submitForm(ruleFormRef)">
@@ -43,6 +46,7 @@ const ruleForm = reactive({
 	sno: 'A13210491',
 	telephone: '15039738621',
 	username: '01ljw',
+	email: '1842568012@qq.com',
 })
 
 const rules = reactive<FormRules>({
@@ -52,8 +56,9 @@ const rules = reactive<FormRules>({
 	],
 	password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
 	repassword: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-	username: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-	telephone: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+	username: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
+	telephone: [{ required: true, message: '请输入手机号', trigger: 'blur' }],
+	email: [{ required: true, message: '请输入学号', trigger: 'blur' }],
 })
 
 const submitForm = async (formEl: FormInstance | undefined) => {
