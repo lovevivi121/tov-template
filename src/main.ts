@@ -5,6 +5,7 @@ import './styles/main.css'
 
 import 'virtual:windi-utilities.css'
 import 'virtual:windi-devtools'
+import 'element-plus/dist/index.css'
 
 import App from './App.vue'
 
